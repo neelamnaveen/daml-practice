@@ -1,0 +1,18 @@
+module ProbStatements where
+
+import Daml.Script -- script import 
+
+quadFunction: Decimal -> Decimal -> Decimal -> Decimal
+
+quadFunction x y z = 3.0*x*x + 2.0*y +z
+
+testQuad: Script()
+
+testQuad = script do
+    debug " Testing quadFunction in general way "
+    debug " =================================== "
+    debug (quadFunction 1.0 2.0 3.0)
+    debug " Testing quadFunction using lamba function"
+    debug " ========================================= "
+    -- debug (\1.0 2.0 3.0 )
+    
